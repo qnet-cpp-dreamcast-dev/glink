@@ -3,10 +3,10 @@
 #include "render_pc.h"
 
 
-void render_sprite(const int x, const int y) {
+void pc_render_sprite(const int x, const int y) {
 
 }
-void render_rect(const int x, const int y, const int w, const int h, const unsigned int color) {
+void pc_render_rect(const int x, const int y, const int w, const int h, const unsigned int color) {
 
 	SDL_Rect r;
 	r.x = x;
@@ -17,7 +17,7 @@ void render_rect(const int x, const int y, const int w, const int h, const unsig
 	SDL_FillRect(SDL_GetVideoSurface(), &r, color);
 }
 
-void render_rect_r(const glink_rect r, const unsigned int color) {
+void pc_render_rect_r(const glink_rect r, const unsigned int color) {
 
 	SDL_Rect out_r;
 	out_r.x = r.x;
@@ -29,11 +29,11 @@ void render_rect_r(const glink_rect r, const unsigned int color) {
 
 }
 
-void blank_video_buffer() {
+void pc_blank_video_buffer() {
 	SDL_FillRect(SDL_GetVideoSurface(), NULL, 0x0);
 }
 
-void update_video() {
+void pc_update_video() {
 
 	SDL_Flip(SDL_GetVideoSurface());
 }

@@ -1,6 +1,9 @@
 
 #include "glink_main.h"
 
+#define SCREEN_W 1280
+#define SCREEN_H 960
+
 void move_rect(glink_rect* r, int delta_x, int delta_y) {
 
 	r->x += delta_x;
@@ -9,7 +12,7 @@ void move_rect(glink_rect* r, int delta_x, int delta_y) {
 
 void rect_screen_collision(glink_rect* r) {
 
-	if (r->x + r->w > 640) {
+	if (r->x + r->w > SCREEN_W) {
 		r->x = 0;
 	}
 }
@@ -19,7 +22,7 @@ int main(int argv, char** args) {
 
 	set_glink_platform(PC);
 
-	glink_setup(1280, 960);
+	glink_setup(SCREEN_W, SCREEN_H);
 
 	int done = 0;
 
@@ -35,14 +38,14 @@ int main(int argv, char** args) {
 		move_rect(&r, 1, 0);
 		rect_screen_collision(&r);
 
-//		blank_video_buffer();
+		blank_video_buffer();
 
 		//render_rect(200, 200, 64, 64, 0x0000FF);
-//		render_rect_r(r, 0xFF0000);
+		render_rect_r(r, 0xFF0000);
 
 
 
-//		update_video();
+		update_video();
 
 	}
 

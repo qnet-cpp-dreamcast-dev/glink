@@ -47,12 +47,12 @@ int check_for_exit() {
 	}
 }
 
-/*
+
 
 void render_rect_r(glink_rect r, unsigned int color) {
 
 	if (platform == PC) {
-		//pc_render_rect_r(r, color);
+		pc_render_rect_r(r, color);
 	}
 	else if (platform == DREAMCAST) {
 		//dc_render_rect_r(r, color);
@@ -87,4 +87,3 @@ void update_video() {
 	}
 }
 
-*/

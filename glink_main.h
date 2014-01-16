@@ -29,8 +29,8 @@ extern int check_for_exit();
 
 /// RENDERING
 
-//extern void render_rect_r(glink_rect, unsigned int);
-//extern void blank_video_buffer();
+extern void render_rect_r(glink_rect, unsigned int);
+extern void blank_video_buffer();
 extern void update_video();
 
 
