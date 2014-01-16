@@ -19,8 +19,8 @@ int main(int argv, char** args) {
 
 	set_glink_platform(PC);
 
-	glink_setup(640, 480);
-/*
+	glink_setup(1280, 960);
+
 	int done = 0;
 
 	glink_rect r;
@@ -35,16 +35,16 @@ int main(int argv, char** args) {
 		move_rect(&r, 1, 0);
 		rect_screen_collision(&r);
 
-		blank_video_buffer();
+//		blank_video_buffer();
 
 		//render_rect(200, 200, 64, 64, 0x0000FF);
-		render_rect_r(r, 0xFF0000);
+//		render_rect_r(r, 0xFF0000);
 
-*/
 
-		update_video();
 
-	//}
+//		update_video();
+
+	}
 
 
 	glink_quit();

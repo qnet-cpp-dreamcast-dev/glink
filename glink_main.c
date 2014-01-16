@@ -8,6 +8,33 @@ void set_glink_platform(GLINK_PLATFORM p) {
 } 
 
 
+void glink_setup(unsigned int w, unsigned int h) {
+
+	if (platform == PC) {
+		glink_pc_setup(w, h);
+	}
+	else if (platform == DREAMCAST) {
+		// dc
+	}
+	else {
+		exit(1);
+	}
+}
+
+void glink_quit() {
+
+	if (platform == PC) {
+		glink_pc_quit();
+	}
+	else if (platform == DREAMCAST) {
+		// dc
+	}
+	else {
+		exit(1);
+	}
+}
+
+
 int check_for_exit() {
 	if (platform == PC) {
 		return pc_check_for_exit(); 
@@ -48,7 +75,6 @@ void blank_video_buffer() {
 	}
 }
 
-*/
 void update_video() {
 	if (platform == PC) {
 		pc_update_video();
@@ -60,3 +86,5 @@ void update_video() {
 		exit(1);
 	}
 }
+
+*/

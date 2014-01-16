@@ -5,10 +5,10 @@
 #include "glink_types.h"
 #include "glink_util.h"
 
-//#include "glink_pc_main.h"
+#include "glink_pc_main.h"
 
-#include "render_pc.h"
-#include "pc_input.h"
+//#include "render_pc.h"
+//#include "pc_input.h"
 
 
 
@@ -18,6 +18,10 @@ extern GLINK_PLATFORM platform;
 
 /// SETUP
 extern void set_glink_platform(GLINK_PLATFORM);
+
+extern void glink_setup(unsigned int, unsigned int);
+
+extern void glink_quit();
 
 //// INPUT
 
