@@ -1,6 +1,8 @@
 
 #include "glink_main.h"
 
+#include <stdio.h>
+
 #define SCREEN_W 1280
 #define SCREEN_H 960
 
@@ -22,7 +24,7 @@ int main(int argv, char** args) {
 
 	set_glink_platform(PC);
 
-	glink_setup(SCREEN_W, SCREEN_H);
+	glink_screen_setup(SCREEN_W, SCREEN_H);
 
 	int done = 0;
 
@@ -30,6 +32,8 @@ int main(int argv, char** args) {
 	glink_rect_init(&r, 250, 300, 128, 128);
 
 	while (!done) {
+
+		fprintf(stdout, "%i\n", glink_get_ticks());
 
 		if (check_for_exit() > 0) {
 			done = 1;

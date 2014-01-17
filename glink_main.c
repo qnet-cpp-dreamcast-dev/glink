@@ -8,7 +8,7 @@ void set_glink_platform(GLINK_PLATFORM p) {
 } 
 
 
-void glink_setup(unsigned int w, unsigned int h) {
+void glink_screen_setup(unsigned int w, unsigned int h) {
 
 	if (platform == PC) {
 		glink_pc_setup(w, h);
@@ -48,8 +48,35 @@ int check_for_exit() {
 }
 
 
+//////////// TIME
 
-void render_rect_r(glink_rect r, unsigned int color) {
+
+
+unsigned int glink_get_ticks() {
+
+	return pc_get_ticks();
+}
+
+
+
+//////////// RENDERING
+
+
+void render_rect(const int x, const int y, const unsigned int w, const unsigned int h, const unsigned int color) {
+
+	if (platform == PC) {
+		pc_render_rect(x, y, w, h, color);
+	}
+	else if (platform == DREAMCAST) {
+		//dc_render_rect_r(r, color);
+	}
+	else {
+		exit(1);
+	}
+}
+
+
+void render_rect_r(const glink_rect r, const unsigned int color) {
 
 	if (platform == PC) {
 		pc_render_rect_r(r, color);

@@ -7,19 +7,17 @@
 
 #include "glink_pc_main.h"
 
-//#include "render_pc.h"
-//#include "pc_input.h"
 
 
 
-typedef enum { PC, DREAMCAST } GLINK_PLATFORM ;
+typedef enum { PC, DREAMCAST } GLINK_PLATFORM;
 
 extern GLINK_PLATFORM platform;
 
 /// SETUP
 extern void set_glink_platform(GLINK_PLATFORM);
 
-extern void glink_setup(unsigned int, unsigned int);
+extern void glink_screen_setup(unsigned int, unsigned int);
 
 extern void glink_quit();
 
@@ -27,9 +25,16 @@ extern void glink_quit();
 
 extern int check_for_exit();
 
+
+///// TIME
+
+extern unsigned int glink_get_ticks();
+
+
 /// RENDERING
 
-extern void render_rect_r(glink_rect, unsigned int);
+extern void render_rect(const int, const int, const unsigned int, const unsigned int, const unsigned int);
+extern void render_rect_r(const glink_rect, const unsigned int);
 extern void blank_video_buffer();
 extern void update_video();
 
