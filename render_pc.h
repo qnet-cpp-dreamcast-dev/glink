@@ -7,13 +7,11 @@
 #include "glink_types.h"
 
 
-typedef _glink_sprite {
-
+typedef struct _glink_sprite {
 	const char* name;		// sprite name or id
 	SDL_Surface* surface;	// surface of the sprite
 	glink_rect box;  		// bounding box of the sprite
 	unsigned char alpha;	// alpha value of the sprite
-
 } glink_sprite;
 
 
