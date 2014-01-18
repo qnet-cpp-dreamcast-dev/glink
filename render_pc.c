@@ -3,7 +3,9 @@
 #include "render_pc.h"
 
 
-void pc_render_sprite(const int x, const int y) {
+void pc_render_sprite(const glink_sprite sprite, const glink_rect rect, const int x, const int y) {
+
+	
 
 }
 void pc_render_rect(const int x, const int y, const int w, const int h, const unsigned int color) {

@@ -19,7 +19,7 @@ extern void set_glink_platform(GLINK_PLATFORM);
 
 extern void glink_screen_setup(unsigned int, unsigned int);
 
-extern void glink_quit();
+extern void glink_shutdown();
 
 //// INPUT
 

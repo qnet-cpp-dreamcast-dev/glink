@@ -7,6 +7,6 @@
 extern SDL_Surface* screen;
 
 extern void glink_pc_setup(unsigned int, unsigned int);
-extern void glink_pc_quit();
+extern void glink_pc_shutdown();
 
 #endif

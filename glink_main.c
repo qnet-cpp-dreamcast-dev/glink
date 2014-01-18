@@ -21,10 +21,10 @@ void glink_screen_setup(unsigned int w, unsigned int h) {
 	}
 }
 
-void glink_quit() {
+void glink_shutdown() {
 
 	if (platform == PC) {
-		glink_pc_quit();
+		glink_pc_shutdown();
 	}
 	else if (platform == DREAMCAST) {
 		// dc

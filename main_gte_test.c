@@ -31,6 +31,8 @@ int main(int argv, char** args) {
 	glink_rect r;
 	glink_rect_init(&r, 250, 300, 128, 128);
 
+	glink_event e;
+
 	while (!done) {
 
 		fprintf(stdout, "%i\n", glink_get_ticks());
@@ -54,6 +56,6 @@ int main(int argv, char** args) {
 	}
 
 
-	glink_quit();
+	glink_shutdown();
 
 }

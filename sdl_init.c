@@ -9,7 +9,7 @@ void glink_pc_setup(unsigned int w, unsigned int h) {
 	screen = SDL_SetVideoMode(w, h, 32, SDL_SWSURFACE);
 }
 
-void glink_pc_quit() {
+void glink_pc_shutdown() {
 
 	SDL_Quit();
 }
