@@ -2,6 +2,7 @@
 #ifndef INPUT_MAIN_H
 #define INPUT_MAIN_H
 
+// #define KEY_TOTAL ???
 
 #define KEY_ESCAPE 0x1B
 
@@ -64,9 +65,9 @@ typedef struct _glink_event {
    the glink_get_key_state (*_input.h) function is called.
    Before use the event queue must first be pumped.
    The array is initialised in glink_init and remains until
-   glink_shutdown is called */
+   glink_shutdown is called. */
 
 extern unsigned char keystates[0xFF];  // initialised in glink_init
-
+//extern unsigned char* keystates;
 
 #endif

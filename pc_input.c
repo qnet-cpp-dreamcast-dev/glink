@@ -21,9 +21,15 @@ void pc_pump_events() {
 unsigned char* pc_get_key_state() {
 
 	Uint8* ks = SDL_GetKeyState(NULL);
+
+	memcpy(keystates, ks, sizeof(unsigned char) * 0xFF);
+
+/*
 	for (int i = 0x00; i < 0xFF; ++i) {
 		keystates[i] = ks[i];
 	}
+
+	*/
 	return keystates;
 }
 
