@@ -3,6 +3,7 @@
 #define SDL_INIT_H
 
 #include "SDL/SDL.h"
+#include "input_main.h"
 
 extern SDL_Surface* screen;
 

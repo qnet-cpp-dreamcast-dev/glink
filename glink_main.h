@@ -23,6 +23,8 @@ extern void glink_shutdown();
 
 //// INPUT
 
+extern void glink_pump_events();
+extern unsigned char* glink_get_key_state();
 extern int check_for_exit();
 
 

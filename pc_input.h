@@ -3,17 +3,11 @@
 #define PC_INPUT_H
 
 #include "SDL/SDL.h"
-
-typedef struct _glink_quit {
-	unsigned char type;
-} glink_quit;
-
-typedef struct _glink_event {
-	unsigned char 	type;
-	glink_quit 		quit;
-} glink_event;
+#include "input_main.h"
 
 extern void glink_poll_event(glink_event*);
+extern void pc_pump_events();
+extern unsigned char* pc_get_key_state();
 extern int pc_check_for_exit();
 
 #endif

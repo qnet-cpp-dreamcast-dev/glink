@@ -35,6 +35,34 @@ void glink_shutdown() {
 }
 
 
+
+///////// INPUT
+
+
+void glink_pump_events() {
+	if (platform == PC) {
+		pc_pump_events();
+	}
+	else if (platform == DREAMCAST) {
+		// dc
+	}
+	else {
+		exit(0);
+	}
+}
+
+unsigned char* glink_get_key_state() {
+	if (platform == PC) {
+		return pc_get_key_state(); 
+	}
+	else if (platform == DREAMCAST) {
+		// dc
+	}
+	else {
+		exit(1);
+	}	
+}
+
 int check_for_exit() {
 	if (platform == PC) {
 		return pc_check_for_exit(); 

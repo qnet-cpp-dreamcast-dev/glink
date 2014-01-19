@@ -35,11 +35,16 @@ int main(int argv, char** args) {
 
 	while (!done) {
 
-		fprintf(stdout, "%i\n", glink_get_ticks());
+		//fprintf(stdout, "%i\n", glink_get_ticks());
 
+		glink_pump_events();
 		if (check_for_exit() > 0) {
 			done = 1;
 		}
+
+		unsigned char* ks = glink_get_key_state();
+		if (ks[KEY_g])
+			fprintf(stdout, "hi\n");
 
 		move_rect(&r, 1, 0);
 		rect_screen_collision(&r);
